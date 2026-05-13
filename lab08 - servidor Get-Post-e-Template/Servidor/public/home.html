@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+ 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+    <link href="estilo.css" rel="stylesheet">
+</head>
+ 
+<body>
+ 
+    <div class="container">
+        <h1>Cadastrar Usuário</h1>
+        <div class="divider"></div>
+ 
+        <form method="get" action="/cadastro">
+            <div class="campo">
+                <label>Nome</label>
+                <input type="text" name="nome" placeholder="Digite seu nome...">
+            </div>
+            <div class="campo">
+                <label>Sobrenome</label>
+                <input type="text" name="sobrenome" placeholder="Digite seu sobrenome...">
+            </div>
+            <div class="campo">
+                <label>Nascimento</label>
+                <input type="date" name="nascimento">
+            </div>
+            <div class="campo">
+                <label>Estado Civil</label>
+                <input type="text" name="civil" placeholder="Ex: Solteiro, Casado...">
+            </div>
+            <input type="submit" value="Salvar">
+        </form>
+    </div>
+ 
+</body>
+</html>

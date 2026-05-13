@@ -1,0 +1,16 @@
+{
+  "name": "servidor-da-aula10",
+  "version": "1.0.0",
+  "description": "meu novo servidor da aula",
+  "main": "servidor.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Nicolas Chagas",
+  "license": "ISC",
+  "dependencies": {
+    "colors": "^1.4.0",
+    "ejs": "^5.0.2",
+    "express": "^5.2.1"
+  }
+}

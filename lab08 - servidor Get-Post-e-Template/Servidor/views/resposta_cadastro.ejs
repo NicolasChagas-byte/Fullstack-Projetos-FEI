@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resposta Cadastro</title>
+    <link href="/estilo.css" rel="stylesheet">
+    <style>
+.resultado {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    margin-bottom: 28px;
+}
+
+.linha {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    padding: 12px 14px;
+    background: rgba(17, 24, 39, 0.8);
+    border: 1px solid rgba(212, 163, 115, 0.15);
+    border-radius: 8px;
+}
+
+.linha span {
+    font-size: 0.75rem;
+    color: #D4A373;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    opacity: 0.85;
+}
+
+.linha p {
+    font-size: 1rem;
+    color: #F9FAFB;
+}
+
+.voltar {
+    display: block;
+    text-align: center;
+    padding: 13px;
+    background: transparent;
+    border: 1px solid rgba(212, 163, 115, 0.5);
+    border-radius: 8px;
+    color: #D4A373;
+    font-family: 'Cinzel', serif;
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: background 0.3s ease, border-color 0.3s ease, transform 0.2s ease;
+}
+
+.voltar:hover {
+    background: rgba(212, 163, 115, 0.1);
+    border-color: #D4A373;
+    transform: translateY(-2px);
+}
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Usuário Cadastrado</h1>
+        <div class="divider"></div>
+
+        <div class="resultado">
+            <div class="linha">
+                <span>Nome</span>
+                <p><%= nome %></p>
+            </div>
+            <div class="linha">
+                <span>Sobrenome</span>
+                <p><%= sobrenome %></p>
+            </div>
+            <div class="linha">
+                <span>Nascimento</span>
+                <p><%= nascimento %></p>
+            </div>
+            <div class="linha">
+                <span>Estado Civil</span>
+                <p><%= civil %></p>
+            </div>
+        </div>
+
+        <a href="/home.html" class="voltar">← Voltar ao formulário</a>
+    </div>
+
+</body>
+</html>

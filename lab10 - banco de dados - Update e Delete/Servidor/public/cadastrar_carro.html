@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastrar Carro</title>
+    <link href="/estilo.css" rel="stylesheet">
+</head>
+<body>
+    <h1>Cadastrar Carro</h1>
+
+    <form method="post" action="/cadastrar_carro">
+        <div class="campo">
+            <label>Marca</label>
+            <input type="text" name="marca" placeholder="Digite a marca...">
+        </div>
+        <div class="campo">
+            <label>Modelo</label>
+            <input type="text" name="modelo" placeholder="Digite o modelo...">
+        </div>
+        <div class="campo">
+            <label>Ano</label>
+            <input type="text" name="ano" placeholder="Digite o ano...">
+        </div>
+        <div class="campo">
+            <label>Quantidade Disponível</label>
+            <input type="number" name="qtde_disponivel" placeholder="Digite a quantidade...">
+        </div>
+        <input type="submit" value="Cadastrar">
+    </form>
+
+    <br>
+    <a href="/lista_carros" class="botao">← Ver lista de carros</a>
+</body>
+</html>

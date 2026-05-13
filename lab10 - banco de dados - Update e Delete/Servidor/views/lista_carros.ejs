@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Carros</title>
+    <link href="/estilo.css" rel="stylesheet">
+</head>
+<body>
+    <h1>Lista de Carros</h1>
+
+    <a href="/cadastrar_carro.html" class="botao">+ Cadastrar novo carro</a>
+    <br><br>
+
+    <table>
+        <tr>
+            <th>Marca</th>
+            <th>Modelo</th>
+            <th>Ano</th>
+            <th>Quantidade</th>
+            <th>Ações</th>
+        </tr>
+
+        <% for(var i = 0; i < carros.length; i++) { %>
+        <tr>
+            <td><%= carros[i].marca %></td>
+            <td><%= carros[i].modelo %></td>
+            <td><%= carros[i].ano %></td>
+            <td>
+                <% if(carros[i].qtde_disponivel == 0) { %>
+                    <span style="color:#EF4444">Esgotado</span>
+                <% } else { %>
+                    <%= carros[i].qtde_disponivel %>
+                <% } %>
+            </td>
+            <td>
+                <form method="post" action="/vender_carro">
+                    <input type="hidden" name="id" value="<%= carros[i]._id %>">
+                    <input type="submit" value="Vender">
+                </form>
+                <form method="post" action="/remover_carro">
+                    <input type="hidden" name="id" value="<%= carros[i]._id %>">
+                    <input type="submit" value="Remover">
+                </form>
+                <form method="post" action="/atualizar_carro">
+                    <input type="hidden" name="id" value="<%= carros[i]._id %>">
+                    <input type="text" name="marca" placeholder="Nova marca">
+                    <input type="text" name="modelo" placeholder="Novo modelo">
+                    <input type="text" name="ano" placeholder="Novo ano">
+                    <input type="number" name="qtde_disponivel" placeholder="Nova qtde">
+                    <input type="submit" value="Atualizar">
+                </form>
+            </td>
+        </tr>
+        <% } %>
+    </table>
+</body>
+</html>

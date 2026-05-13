@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+    <link href="/estilo.css" rel="stylesheet">
+    <style>
+        .post {
+            background: rgba(17, 24, 39, 0.8);
+            border: 1px solid rgba(212, 163, 115, 0.15);
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 16px;
+        }
+
+        .post h2 {
+            font-family: 'Cinzel', serif;
+            font-size: 1rem;
+            color: #D4A373;
+            margin-bottom: 8px;
+        }
+
+        .post p {
+            font-size: 0.9rem;
+            color: rgba(249, 250, 251, 0.7);
+            margin-bottom: 6px;
+        }
+
+        .post .conteudo {
+            font-size: 0.95rem;
+            color: #F9FAFB;
+            margin-top: 10px;
+            padding-top: 10px;
+            border-top: 1px solid rgba(212, 163, 115, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Blog</h1>
+        <div class="divider"></div>
+
+        <a href="/cadastrar_post.html" class="botao">+ Novo Post</a>
+
+        <br><br>
+
+        <% for(var i = 0; i < posts.length; i++) { %>
+            <div class="post">
+                <h2><%= posts[i].titulo %></h2>
+                <p><%= posts[i].resumo %></p>
+                <div class="conteudo"><%= posts[i].conteudo %></div>
+            </div>
+        <% } %>
+
+    </div>
+</body>
+</html>
